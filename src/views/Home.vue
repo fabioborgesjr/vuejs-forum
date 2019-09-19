@@ -11,7 +11,7 @@ export default {
   },
   async created() {
     try {
-      const { data } = await axios.get(`${URL}/threads`);
+      const { data } = await axios.get(`${URL}/api/threads`);
       this.threads = data.data;
     } catch (error) {
       console.log(error);
@@ -65,6 +65,7 @@ export default {
 .card-link {
   margin-left: 10px;
 }
+
 .row {
   display: flex;
   justify-content: space-evenly;

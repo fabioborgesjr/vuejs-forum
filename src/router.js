@@ -38,13 +38,14 @@ export default new Router({
         },
         {
           path: '404',
+          name: '404',
           component: c404
-        }
+        },
       ]
     },
     {
       path: '*',
-      redirect: '/'
+      redirect: '/404',
     }
   ]
 });

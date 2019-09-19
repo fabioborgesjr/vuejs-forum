@@ -33,8 +33,8 @@ const threads = {
   },
 };
 
-app.use(_.get('/threads', threads.index));
-app.use(_.get('/threads/:slug', threads.show));
+app.use(_.get('/api/threads', threads.index));
+app.use(_.get('/api/threads/:slug', threads.show));
 
 app.listen(process.env.API_PORT);
 

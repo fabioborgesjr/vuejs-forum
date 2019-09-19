@@ -10,7 +10,7 @@ const delay = miliseconds => new Promise(resolve => setTimeout(resolve, miliseco
  */
 const load = async (path = '/') => {
   try {
-    await page.goto('http://localhost:1338' + path);
+    await page.goto('http://localhost:8080' + path);
     await delay(500);
   } catch (e) {
     await load(path);
@@ -25,6 +25,8 @@ describe('Forum', () => {
 
   it('should redirect to 404 if page does not exist.', async () => {
     await load('/some-random-page');
+
+    console.log(page.url())
 
     assert(page.url().indexOf('404') !== -1, 'Should redirect to 404 if thread does not exist.');
   });
