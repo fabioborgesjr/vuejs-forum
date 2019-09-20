@@ -10,7 +10,7 @@ const delay = miliseconds => new Promise(resolve => setTimeout(resolve, miliseco
  */
 const load = async (path = '/') => {
   try {
-    await page.goto('http://localhost:8080' + path);
+    await page.goto('http://localhost:1338' + path);
     await delay(500);
   } catch (e) {
     await load(path);
