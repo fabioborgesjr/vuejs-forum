@@ -42,7 +42,7 @@ export default {
         <RouterLink
           class="card-link"
           data-test="link"
-          :to="{ name: 'detail', params: { slug: thread.slug } }"
+          :to="{ name: 'thread', params: { slug: thread.slug } }"
         >Continuar lendo...</RouterLink>
         <div class="card-footer">
           {{thread.total_replies}} respostas

@@ -32,8 +32,8 @@ export default new Router({
           component: About
         },
         {
-          path: 'detail/:slug',
-          name: 'detail',
+          path: 'thread/:slug',
+          name: 'thread',
           component: Detail
         },
         {
